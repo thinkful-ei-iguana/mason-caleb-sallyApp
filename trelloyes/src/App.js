@@ -1,4 +1,6 @@
 import React from 'react';
+import store from './store.js';
+import List from './List.js';
 
 function App(props) {
   return (
@@ -7,7 +9,11 @@ function App(props) {
         <h1>Trelloyes!</h1>
       </header>
     <div className="App-list">
-
+      {store.list.map(list => <List 
+      id={list.id}
+      header={list.header}
+      cardIds={list.cardIds}
+      />)}
     </div>
     </main>
   );
