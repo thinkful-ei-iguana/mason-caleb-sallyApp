@@ -1,13 +1,16 @@
 import React from 'react';
 import Card from './Card.js';
+import store from './store.js';
+import './List.css';
 
 function List (props) {
+  console.log(props);
   const cards = props.cardIds.map(card => {
   
-    <Card 
+    return <Card 
       key={card}
-      title={allCards.card.title}
-      content={allCards.card.content}
+      title={store.allCards[card].title}
+      content={store.allCards[card].content}
     />
   });
   
@@ -22,6 +25,4 @@ function List (props) {
   )
 }
 
-export default {
-  List
-}
+export default List

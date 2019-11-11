@@ -1,4 +1,5 @@
 import React from 'react';
+import './Card.css';
 
 function Card (props) {
   return (
@@ -10,6 +11,4 @@ function Card (props) {
   )
 }
 
-export default {
-  Card
-}
+export default Card

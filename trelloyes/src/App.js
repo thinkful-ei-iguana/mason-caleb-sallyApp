@@ -1,9 +1,10 @@
 import React from 'react';
 import List from './List.js';
+import './App.css';
 
 function App(props) {
-  const lists = props.store.STORE.list.map(list => {
-    <List 
+  const lists = props.store.lists.map(list => {
+    return <List 
       id={list.id}
       header={list.header}
       cardIds={list.cardIds}
